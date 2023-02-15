@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="moj.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="buttonStyle" onclick="myFunction()"><a>Obavijest</a> 
+                <span class="popuptext" id="myPopup">1. zimski ispitni rok</span>
+            </div>
+        <div class="buttonStyle">
+            <a onclick="mirrorImage()">Okretanje slike</a>
+        </div>
+        <div class="buttonStyle">
+            <a onclick="appendBazas()">Rezultati</a>
+        </div>
+        </header>
+        <div class="container">
+            <div class="center">
+                <img 
+                id="mirroredImage"
+                src="https://images.pexels.com/photos/1280162/pexels-photo-1280162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt=""
+                width="750px"
+                height="500px">
+            </div>
+            <div class="center">
+                <img
+                class="imageMiror"
+                id="mirroredImage2"
+                src="https://images.pexels.com/photos/1280162/pexels-photo-1280162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt=""
+                width="750px"
+                height="500px">
+            </div>
+            <div>
+                <form class="center">
+                    <label for="ime">Ime</label>
+                    <input class="center" type="text" name="ime" id="ime" />
+                    <br>
+                    <label for="prezime">Prezime</label>
+                    <input class="center" type="text" name="prezime" id="prezime" />
+                    <br>
+                    <label for="kolegij">Kolegij</label>
+                    <input class="center" type="text" name="kolegij" id="kolegij" />
+                    <br>
+                    <label for="br_bod">Broj bodova</label>
+                    <input class="center" type="integer" name="br_bod" id="br_bod" />
+                    <br>
+                    <button class="center" type="submit">Submit</button>
+                  </form>
+            </div>
+            <div>
+                <div class="center" ><span id="bazaPodataka"></span></div>
+            </div>
+        </div>
+        <footer>
+            <p class="left">Kevin Pokos</p>
+            <p class="left"><span id="time"></span></p>
+        </footer>
+    </div>
+    <script src="kod.js"></script>
+</body>
+</html>
