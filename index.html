@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <div class="buttonStyle" onclick="myFunction()"><a>Obavijest</a> 
-                <span class="popuptext" id="myPopup">1. zimski ispitni rok</span>
+                <span class="popuptext" id="myPopup">Ispit iz PA2</span>
             </div>
         <div class="buttonStyle">
             <a onclick="mirrorImage()">Okretanje slike</a>
@@ -39,7 +39,7 @@
                 height="500px">
             </div>
             <div>
-                <form class="center">
+                <form id="unos" method="post" class="center">
                     <label for="ime">Ime</label>
                     <input class="center" type="text" name="ime" id="ime" />
                     <br>
@@ -50,8 +50,10 @@
                     <input class="center" type="text" name="kolegij" id="kolegij" />
                     <br>
                     <label for="br_bod">Broj bodova</label>
-                    <input class="center" type="integer" name="br_bod" id="br_bod" />
+                    <input class="center" type="integer" max="40" name="br_bod" id="br_bod" />
                     <br>
+                    <label for="ocjena">Ocjena:</label>
+                    <span id="ocjena">-</span>
                     <button class="center" type="submit">Submit</button>
                   </form>
             </div>
@@ -60,9 +62,10 @@
             </div>
         </div>
         <footer>
-            <p class="left">Kevin Pokos</p>
-            <p class="left"><span id="time"></span></p>
-        </footer>
+            <span id="name"></span>
+            <span id="time"></span>
+          </footer>
+          
     </div>
     <script src="kod.js"></script>
 </body>

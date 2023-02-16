@@ -6,13 +6,13 @@ var bazas = document.getElementById("bazaPodataka");
 
 bazas = []
 
-
-
 function refreshTime() {
-    const timeDisplay = document.getElementById("time");
-    const dateString = new Date().toLocaleString();
-    const formattedString = dateString.replace(", ", " - ");
-    timeDisplay.textContent = formattedString;
+  const now = new Date();
+  const hour = now.getHours().toString().padStart(2, '0');
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  document.getElementById("name").textContent = "Kevin Pokos";
+  document.getElementById("time").textContent = `${hour}:${minute}`;
+  
   }
     setInterval(refreshTime, 1000);
 
@@ -40,6 +40,7 @@ function mirrorImage() {
   
     bazas.push(value)
     d = bazas.length
+    console.log(bazas)
   }
 const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit);
@@ -48,3 +49,31 @@ form.addEventListener('submit', handleSubmit);
 function appendBazas(bazas){
     document.getElementById("bazaPodataka").innerHTML =bazas
 }
+
+function izracunBodova(bodovi) {
+  if (bodovi >= 35 && bodovi <= 40) {
+    return 5;
+  } else if (bodovi >= 30 && bodovi < 35) {
+    return 4;
+  } else if (bodovi >= 25 && bodovi < 30) {
+    return 3;
+  } else if (bodovi >= 20 && bodovi < 25) {
+    return 2;
+  } else if (bodovi >= 15 && bodovi < 20) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+let rezultati = {
+  "studenti": [
+    {
+      "ime": "",
+      "prezime": "",
+      "kolegij": "",
+      "bodovi": "",
+      "ocjena": ""
+    }
+  ]
+};
